@@ -1,0 +1,241 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f0ec;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 50px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    margin-top: 10px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    transform: scale(1.1) ;
+    font-weight: 700;
+}
+
+nav ul li a:hover, .active {
+    color: #1abc9c;
+    font-weight: 700;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between icons */
+}
+
+.profile-btn, .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-btn svg, .search-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: black; /* Icon color */
+}
+
+.profile-btn:hover, .search-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Optional: Add a soft shadow effect */
+.profile-btn:focus, .search-btn:focus {
+    outline: none;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    gap: 20px; /* Space between map and order summary */
+    margin-top: 30px;
+}
+
+/* Map Section */
+.map-section {
+    width: 100%;
+    max-width: 700px;
+    height: 440px; /* Set a fixed height for uniformity */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Summary Box */
+.order-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 400px; /* Same height as map-section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content properly */
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 1px;
+}
+
+/* Special Instructions TextArea */
+
+.special-instruction textarea {
+    width: 325px;   
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Delivery & Pickup Buttons Centered */
+.delivery-options {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 15px; /* Add spacing between buttons */
+    margin-top: 20px;
+}
+
+.delivery-options button {
+    width: 100px; /* Fixed width for uniform size */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.delivery-btn {
+    background-color: white;
+    border-color: #1abc9c;
+    color: #1abc9c;
+}
+
+.pickup-btn {
+    background-color: white;
+    border-color: #000;
+    color: black;
+}
+
+.delivery-btn:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.pickup-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Centering Place Order Button */
+.place-order-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.place-order-btn {
+    width: 250px; /* Fixed width */
+    padding: 15px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.place-order-btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.06);
+}
+
+/* Special Instruction Section */
+
+.special-instruction label {
+    margin-top: 1px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    margin-right: 10%;
+    height: 100px; /* Adjust height */
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: none; /* Prevent resizing */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #1abc9c; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
