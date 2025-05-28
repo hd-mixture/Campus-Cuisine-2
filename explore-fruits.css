@@ -1,0 +1,245 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f0ec;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 50px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    margin-top: 10px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    transform: scale(1.1) ;
+    font-weight: 700;
+}
+
+nav ul li a:hover, .active {
+    color: #1abc9c;
+    font-weight: 700;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between icons */
+}
+
+.profile-btn, .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-btn svg, .search-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: black; /* Icon color */
+}
+
+.profile-btn:hover, .search-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Optional: Add a soft shadow effect */
+.profile-btn:focus, .search-btn:focus {
+    outline: none;
+}
+
+.fruits-section {
+    margin: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    max-width: fit-content;
+    border-radius: 10px;
+}
+.fruits-section h2 {
+    margin-top: 1px;
+    color: #e67e22;
+}
+.fruit-container {
+    display:flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.fruit-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    max-height: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.fruit-card:hover {
+    background: #1abc9cbe;
+    transform: scale(1.1);
+}
+
+.fruit-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.fruit-card h3 {
+    margin: 10px 0;
+}
+.fruit-card p {
+    color: green;
+}
+.highlighted {
+    border: 2px solid #3498db;
+    transition: all 0.2s ease-in-out;
+}
+
+.highlighted:hover {
+    background: #1abc9cbe;
+    transform: scale(1.1);
+}
+
+.add-to-cart {
+    font-family: 'poppins';
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background: #cfccca;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 18px;
+    }
+    .logo img {
+        margin-left: 10px;
+        height: 50px;
+        margin-top: 0;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 18px;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        padding: 80px 20px 20px 20px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        z-index: 999;
+        transition: right 0.3s ease-in-out;
+    }
+    nav.active ul {
+        right: 0;
+    }
+    .icons {
+        gap: 8px;
+    }
+    .profile-btn svg, .search-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    .fruits-section {
+        margin: 18px 0 0 0;
+        padding: 12px 8px;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .fruits-section h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .fruit-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        width: 100%;
+        justify-content: center;
+    }
+    .fruit-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 180px;
+        margin: 0 auto;
+        padding: 12px 6px;
+    }
+    .fruit-card img {
+        width: 100%;
+        max-width: 90px;
+        margin: 0 auto 8px auto;
+        display: block;
+    }
+    .add-to-cart {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        height: 32px;
+    }
+    .fruits-section {
+        padding: 8px 2px;
+    }
+    .fruit-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .fruit-card {
+        max-width: 98%;
+        padding: 10px 2px;
+    }
+    .fruit-card img {
+        max-width: 70px;
+    }
+    .add-to-cart {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}

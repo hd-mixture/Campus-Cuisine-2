@@ -1,0 +1,362 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff4500;
+}
+
+/* Header Icons */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icons button svg {
+    width: 24px;
+    height: 24px;
+    fill: black;
+    transition: transform 0.3s ease;
+}
+
+.icons button:hover svg {
+    transform: scale(1.1);
+}
+
+/* Main About Section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+/* About Card */
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Keep everything centered */
+}
+
+.profile-pic {
+    width: 150px; /* Adjust the size */
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    border: 5px solid #fff; /* Add a white border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    object-fit: cover; /* Ensure the image fits properly */
+    margin-bottom: 15px; /* Space between pic and icons */
+    object-position: center 30%;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+.designation {
+    letter-spacing: 5.1px;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Tech Stack */
+.tech-stack ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.tech-stack li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Set icons in vertical direction */
+    align-items: center; /* Center icons */
+    gap: 10px; /* Space between icons */
+}
+
+.social-links svg {
+    width: 40px;
+    height: 40px;
+    fill: #888; /* Default gray color */
+    transition: fill 0.3s ease, transform 0.2s ease;
+}
+
+.social-links svg:hover {
+    fill: currentColor;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Define brand colors */
+.social-links svg:nth-child(1) { color: #E4405F; }  /* Instagram */
+.social-links svg:nth-child(2) { color: #0077B5; }  /* LinkedIn */
+.social-links svg:nth-child(3) { color: #25D366; }  /* WhatsApp */
+.social-links svg:nth-child(4) { color: #000000; }  /* Github */
+
+/* Chat Button */
+.chat-button {
+    position: absolute;
+    bottom: 40px; /* Adjust vertical positioning */
+    right: 250px;  /* Adjust horizontal positioning */
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for better button visibility */
+    border-radius: 8px; /* Consistent with the hover effect */
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .about-container {
+        padding: 10px;
+    }
+    .about-card {
+        padding: 18px;
+        gap: 18px;
+        max-width: 98vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 12px;
+    }
+    .logo img {
+        height: 45px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 16px;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        padding: 80px 20px 20px 20px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        z-index: 999;
+        transition: right 0.3s ease-in-out;
+    }
+    nav ul.active {
+        right: 0;
+    }
+    .icons button svg {
+        width: 20px;
+        height: 20px;
+    }
+    .about-container {
+        min-height: unset;
+        padding: 8px 0;
+    }
+    .about-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 4px;
+        gap: 14px;
+        max-width: 99vw;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 14px;
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 18px;
+    }
+    .social-links svg {
+        width: 32px;
+        height: 32px;
+    }
+    .about-content h2 {
+        font-size: 18px;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .chat-button {
+        position: static;
+        display: block;
+        margin: 18px auto 0 auto;
+        width: 90%;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .tech-stack ul {
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        margin-left: 10px;
+        height: 45px;
+    }
+    .about-card {
+        padding: 10px 6px;
+        gap: 10px;
+    }
+    .profile-pic {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 18px;
+        display: block;
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 10px;
+    }
+    .social-links svg {
+        width: 32px;
+        height: 32px;
+    }
+    .about-content,
+    .tech-stack {
+        text-align: left !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .tech-stack ul {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        list-style-position: inside;
+        box-sizing: border-box;
+    }
+    .tech-stack li {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .about-content h2 {
+        margin-left: 0;
+        font-size: 15px;
+        text-align: center;
+    }
+    .designation {
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .description {
+        margin-left: 0;
+        font-size: 13px;
+        text-align: justify;
+    }
+    .chat-button {
+        width: 98%;
+        font-size: 0.95rem;
+        padding: 10px 0;
+        margin: 12px auto 0 auto;
+        display: block;
+    }
+}

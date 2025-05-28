@@ -1,0 +1,731 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f0ec;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 50px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    margin-top: 10px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    transform: scale(1.1) ;
+    font-weight: 700;
+}
+
+.login-container {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    font-family: 'poppins';
+    font-weight: 700;
+    background: #1abc9c;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: ease-in-out 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+    font-family: 'poppins';
+    color: black;
+    font-weight: 700;
+    background: #afaaaa;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: black; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-btn:hover svg {
+    transform: scale(1.1); 
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: -20px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display';
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1; /* Reduce line height to remove extra spacing */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.hero-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #555;
+    letter-spacing: 13.2px;
+    margin-top: 10px; /* Adjust as needed to bring it closer */
+}
+
+.category-container {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Space between category boxes */
+    margin-top: 10px;
+}
+
+.category-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    height: 180px;
+    background: #f8f8f8; /* Default background */
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: relative;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.category-box a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.category-box a:hover {
+    text-decoration: underline;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    background: #1abc9c;
+    cursor: pointer; /* Change category-box background on hover */
+}
+
+/* Change image background when category-box is hovered */
+.category-box:hover img {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Label styling */
+.category-box p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+/* Hover text below the label */
+.category-box:hover .hover-text {
+    display: block;
+}
+
+/* Hidden by default */
+.hover-text {
+    font-size: 12px;
+    color: #444;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
+}
+
+.category-box img {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #1abc9c98;
+    border-radius: 12px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-box .category-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.ellipse-container {
+    position: absolute;
+    top: 55%;
+    right: -0px; /* Adjust positioning */
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.ellipse {
+    width: 175px; /* Half of the full circle */
+    height: 350px; /* Full height of the circle */
+    border: 40px solid rgba(231, 77, 60, 0.637); /* Red border */
+    border-radius: 350px 0 0 350px; /* Creates a left half-circle */
+    border-right: none; /* Hides the right part */
+    background: transparent; /* Keeps inside empty */
+    position: relative;
+}
+
+.salad-img {
+    right: 0; /* Moves to the right */
+    bottom: 0;
+    position: absolute;
+    max-width: 400px; /* Ensures width stays within 100px */
+    max-height: 400px; /* Limits total height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow */
+    transform: translate(-15%, -10%); 
+}
+
+.salad-img img {
+    width: 400%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 400px; /* Ensures image does not exceed 100px */
+    object-fit: contain; /* Ensures full image is visible */
+}
+
+.discount {
+    font-family: 'Playfair Display';
+    position: absolute;
+    top: 22rem; /* Moves it down */
+    right: 70px; /* Adjust as needed */
+    transform: translateY(-50%); /* Centers vertically */
+    
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 5px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    
+    border: 7px solid #1abc9c;
+}
+
+.percent {
+    margin-top: -10px;
+    font-size: 25px; /* Size for 30% */
+    font-weight: bold;
+}
+
+.off-text {
+    line-height: 15px;
+    font-size: 30px; /* Increase only "Off" size */
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+footer {
+    text-align: left;
+    padding: 40px;
+    margin-top: 0px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a svg {
+    width: 15px;
+    height: 15px;
+    fill: white;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.social-icons a:hover svg {
+    fill: black;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        position: relative;
+        height: 70px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 45px;
+        margin-top: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1000;
+        padding: 5px;
+        margin-left: auto;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        padding: 80px 20px 20px;
+        transition: 0.3s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        display: block;
+        padding: 12px 0;
+        color: #333;
+    }
+
+    .login-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .login-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .search-btn {
+        padding: 6px;
+    }
+
+    .search-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: center;
+        order: 0;
+        margin-bottom: 38px;
+    }
+
+    .hero-text h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0;
+        text-align: center;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-text p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #555;
+        letter-spacing: 8px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .category-container {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        grid-auto-rows: 1fr;
+        gap: 32px;
+        margin: 32px auto 0 auto;
+        padding: 0 0 10px 0;
+        max-width: 360px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .category-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 160px;
+        height: 160px;
+        padding: 24px 10px 16px 10px;
+    }
+
+    .category-box img {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+        background: #1abc9c18;
+        border-radius: 10px;
+        padding: 7px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category-box p {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 6px 0 0 0;
+        color: #333;
+        text-align: center;
+    }
+
+    .category-box .hover-text {
+        font-size: 12px;
+        color: #666;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    .category-box:hover {
+        transform: translateY(-5px);
+        background: #1abc9c;
+    }
+
+    .category-box:hover p,
+    .category-box:hover .hover-text {
+        color: white;
+    }
+
+    .ellipse-container {
+        display: none;
+    }
+
+    .salad-img {
+        position: relative;
+        max-width: 100%;
+        transform: none;
+        margin: 30px auto 0;
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .salad-img img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .discount {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .percent {
+        font-size: 20px;
+        margin-top: -8px;
+    }
+
+    .off-text {
+        font-size: 24px;
+        line-height: 12px;
+    }
+
+    footer {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons a svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 8px 15px;
+        height: 60px;
+    }
+
+    .logo img {
+        margin-left: 10px;
+        height: 45px;
+    }
+
+    .login-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .search-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-text h1 {
+        margin-left: -1.5rem;
+        margin-top: 5rem;
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 130px);
+        gap: 24px;
+        max-width: 280px;
+    }
+
+    .category-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 130px;
+        height: 130px;
+        padding: 14px 4px 10px 4px;
+    }
+
+    .category-box img {
+        margin-top: 0;
+        margin-bottom: 8px;
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        background: #1abc9c18;
+        border-radius: 10px;
+        padding: 4px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category-box p {
+        font-size: 12px;
+        margin: 4px 0 0 0;
+    }
+
+    .category-box .hover-text {
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    .salad-img img {
+        max-width: 250px;
+    }
+
+    .discount {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .percent {
+        font-size: 18px;
+    }
+
+    .off-text {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icons a svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero-text {
+        margin-bottom: 28px;
+        order: 0;
+    }
+}
